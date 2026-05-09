@@ -4,6 +4,14 @@ object pasajeros {
     var pasajeroMayorVitalidad = null
 
 
+    method subirPasajero(pasajero){
+        listaPasajeros.add(pasajero)
+    }
+
+    method bajarPasajero(pasajero){
+        listaPasajeros.remove(pasajero)
+    }
+
     method ContarPasajeros() {
         return listaPasajeros.size()
     }
@@ -25,6 +33,7 @@ object pasajeros {
     method Colision() {
         listaPasajeros.forEach({n => n.saltar()})
         listaPasajeros.clear()
+        return listaPasajeros.size()
     }
 
     method Acelerar() {

@@ -1,9 +1,13 @@
-
+import pasajeros.*
+import nave.*
 
 describe "group of tests " {
 
-  test "test 01" {
-    assert.equals(100, 50+50)
+  test "test matrix" {
+    assert.equals(pasajeros.estaEquilibrada(), true)
+    assert.equals(neo.saltar(), 50)
+
+    assert.equals(pasajeros.Colision(), pasajeros.listaPasajeros.size() == 0)
   }
 
 }
